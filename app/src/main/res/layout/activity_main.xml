@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/latar_belakang"
+        android:src="@drawable/latar"
+        android:scaleType="centerCrop"/>
+    
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/header">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_desc"
+            android:text="@string/Judul"
+            android:textColor="#ffbf00"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center" />
+    </RelativeLayout>
+
+<!--    #aa54ff-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page"
+        android:layout_below="@id/header">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:cardBackgroundColor="#e6e6e6"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:id="@+id/layout_username"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="30dp"
+                app:startIconDrawable="@drawable/baseline_person_24"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_username"
+                    android:maxLength="25"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:id="@+id/layout_password"
+                android:hint="Passowrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="130dp"
+                app:startIconDrawable="@drawable/baseline_lock_24"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_password"
+                    android:maxLength="15"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:id="@+id/layout_confirm"
+                android:hint="Confirm passowrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="230dp"
+                app:startIconDrawable="@drawable/baseline_check_circle_24"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_confirm"
+                    android:maxLength="15"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:id="@+id/register"
+        android:layout_marginTop="487dp"
+        android:backgroundTint="#e8af02"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="Register"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18dp" />
+
+    <Space
+        android:id="@+id/kosongan"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/medsos"
+        android:layout_below="@+id/kosongan"
+        >
+
+        <ImageView
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toLeftOf="@id/google"
+            android:layout_marginEnd="170dp"
+            android:src="@drawable/github" />
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:src="@drawable/google"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:src="@drawable/instagram"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="97dp"/>
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/kosongan2"
+        android:layout_below="@+id/medsos"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kosongan2">
+
+        <TextView
+            android:id="@+id/f1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/footer1"
+            android:textColor="@color/white"
+            android:layout_marginLeft="118dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/f2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/f1"
+            android:layout_marginLeft="5dp"
+            android:text="@string/footer2"
+            android:textColor="#ffbf00"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

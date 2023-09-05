@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SignUpPage</string>
+    <string name="Judul">Create your Account</string>
+    <string name="basa_basi">Join our community
+        to explore more experience</string>
+    <string name="btn_join">Sign Up</string>
+    <string name="footer1">Already a member? </string>
+    <string name="footer2"> SignIn</string>
+</resources>
